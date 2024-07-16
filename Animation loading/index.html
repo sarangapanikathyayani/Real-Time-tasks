@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loading</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            background-color: black;
+        }
+        body{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+        }
+        .line{
+            width:5px;
+            height:10px;
+            background: red;
+            margin-left: 20px;
+            animation: scale 1000ms infinite;
+        }
+        .container{
+            display: flex;
+        }
+        @keyframes scale {
+            30%{
+                transform:scaleY(4);
+            }
+            60%{
+                transform: scaleY(1);
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <div class="line"></div>
+      <div class="line" style="animation-delay: 100ms;"></div>
+      <div class="line" style="animation-delay: 200ms;"></div>
+      <div class="line" style="animation-delay: 300ms;"></div>
+      <div class="line" style="animation-delay: 400ms;"></div>
+      <div class="line" style="animation-delay: 500ms;"></div>
+      <div class="line" style="animation-delay: 600ms;"></div>
+    </div>
+</body>
+</html>

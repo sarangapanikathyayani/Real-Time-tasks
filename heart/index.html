@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Heart</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            background: black;
+        }
+        .heart
+        {
+            width:100px;
+            height: 100px;
+            background-color: rgb(255,49,49);
+            position: relative;
+            transform: rotate(45deg);
+            animation: beat 1s infinite;
+
+        }
+        @keyframes beat {
+            0%{
+                transform:rotate(45deg) scale(0.7);
+            }
+            
+            100%
+            {
+                transform:rotate(45deg) scale(1.1);
+            }
+        }
+        .heart::before,.heart::after{
+            content:'';
+            width:100px;
+            height: 100px;
+            background-color:rgb(255,49,49);
+            position: absolute;
+            border-radius: 50%;
+           
+        }
+        .heart::before{
+            transform: translateX(-50%);
+        }
+        .heart::after{
+            transform: translateY(-50%);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="heart">
+
+    </div>
+</body>
+</html>
